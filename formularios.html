@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <title>Formulários</title>
+    </head>
+    <body style=>
+        <h1 >Formulário de cadastro</h1>
+        <form>
+            <h2>Informações Pessoais</h2>
+            <div>
+                <p> 
+                    <form class="container" action= 'servidor.php' method= 'POST'>
+                        <strong>Nome completo</strong>: 
+                            <input type='text' required="true" name = 'nome' placeholder = "Informe seu nome completo" autofocus='true'>
+                </p>
+                
+                <p>
+                    <form action= 'servidor.php' method= 'POST'>
+                        <strong>Digite seu e-mail</strong>:
+                                <input type='email' name = 'email' placeholder = "Informe seu email">
+                </p>
+
+                <p>
+                        <strong>Sexo: </strong>
+                            <input type="radio" checked = 'true' name="sexo" ide="masculino" value="Masculino">
+                                <label for ="masculino" >Masculino </label>
+                            <input type="radio" name="sexo" ide="feminino" value="Feminino">
+                                <label for ="feminino" >Feminino </label><br>
+                </p>
+                <p>  
+                        <strong>Data de Nascimento: </strong>
+                            <input  type= 'date' placeholder="DD/MM/AAAA" nome='dataNascimento' required="true">
+                </p>
+                
+                <p>
+                        <strong>Grau de Escolaridade: </strong> 
+                            <select nome ='tamanho_tabela' size='1'>
+                                <option value='ensinomedio'>Ensino Médio</option>
+                                <option value='superiorcompleto' selected='true'>Superior Completo</option>
+                                <option value='posgraduação'>Pós-Graduação</option>
+                                <option value='mestrado'>Mestrado</option>
+                                <option value='doutorado'>Doutorado</option>
+                            </select>
+                    </form>
+                </p>
+
+                <h2>Informações gerais</h2>
+
+                <p> <strong>Estilos musicais preferidos: </strong> 
+                        <select nome = 'tamanho_tabela' size='5' multiple = 'true' >
+                            <option value= 'rock'>Rock</option>
+                            <option value= 'funk'>Funk</option>
+                            <option value= 'samba'>Samba</option>
+                            <option value= 'pagode'>Pagode</option>
+                            <option value= 'pop'>Pop</option>
+                        </select>
+                </p>
+                        
+                <p> <strong>Nome de usuário</strong>: 
+                        <input type='text' name = 'usuario' required="true"></p>
+                    
+                <p> <strong>Senha</strong>: 
+                        <input type='password' name = 'senha' required="true"></p>
+
+                <p> <strong>Cor preferida</strong>: 
+                        <input type=color name = 'cor'></p>
+
+                <p> <strong>Quantidade de filhos</strong>: 
+                        <input type='number' name = 'filhos' placeholder="0"></p>
+        
+                <div class="slider-wrapper">
+                    <p> <strong>Quantidade de veiculo</strong>: 0
+                            <input type="range" min="0" max="10" value="0" step="1"> 10
+                    </p>
+                </div>
+
+                <p> <strong>Comentarios sobre o site: </strong><br>
+                    <form> 
+                        <textarea cols='110' rows='10' name='comentarios' placeholder="Digite seu comentario aqui: "></textarea>
+                    </form>
+                </p>
+
+                <p>
+                    <input type="checkbox"> Desejo receber ofertas por e-mail.
+                    <p> <input type="reset"  name="b2" value="Limpar">
+                        <input type="submit" name="b1" value="Enviar">
+                    </p>
+                </p>
+            </div>
+        </form> 
+        <hr>   
+    </body>
+</html>
